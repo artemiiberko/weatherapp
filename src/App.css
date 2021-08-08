@@ -1,38 +1,141 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+body {
+  font-family: "Montserrat", serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.main {
+    display: flex;
+    background-color: white;
+    min-height: 80vh;
+    width: 60%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(1rem);
+}
+
+
+.circle1, .circle2{
+    background-color: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.circle1{
+    top: 5%;
+    right: 15%;
+}
+
+.circle2{
+    bottom: 5%;
+    left: 10%;
+}
+
+.info {
+  background: url("img/polygon.jpg") 0 0/cover no-repeat;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding-top: 5%;
+  border-radius: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+}
+.top-form{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bottom-form{
+    display: flex;
+    justify-content: center;
+    flex: 3;
+}
+input {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 20px rgba(122,122,122, 0.2);
+    margin-left: 10px;
+    height: 55 px;
+    
+}
+input:focus::placeholder {
+    color: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+    margin: 1rem;
+    outline: none;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 16px 30px;
+    border-radius: 30px;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    box-shadow: 6px 6px 20px rgba(122,122,122, 0.2);
+    color: black;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    height: 55px;
+
+}
+button:hover {
+    background: #6cdbeb;
+}
+button:active {
+    background: #26ceaf;
 }
 
-.App-link {
-  color: #61dafb;
+.info h2 {
+  font-size: 40px;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.infoWeath {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2.5;
+    letter-spacing: 1.5px;
+
+}
+
+.error {
+  font-size: 22px;
+  color: #f34f4f;
+  font-weight: bold;
 }
